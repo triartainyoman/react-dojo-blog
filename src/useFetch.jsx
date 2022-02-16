@@ -6,9 +6,12 @@ const useFecth = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // Create abort controller
+    const abortCont = new AbortController();
+
     // Just for development - delete setTimeout when publish to production
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortCont.signal })
         .then((res) => {
           // Make custom error message
           if (!res.ok) {
@@ -22,10 +25,16 @@ const useFecth = (url) => {
           setError(null);
         })
         .catch((err) => {
-          setError(err.message);
-          setIsLoading(false);
+          if (err.name === "AbortError") {
+            console.log("fetch aborted");
+          } else {
+            setError(err.message);
+            setIsLoading(false);
+          }
         });
     }, 1000);
+
+    return () => abortCont.abort();
   }, [url]);
 
   return { data, isLoading, error };
