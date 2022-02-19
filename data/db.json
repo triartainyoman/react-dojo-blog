@@ -41,6 +41,12 @@
       "body": "Lorem ipsum",
       "author": "mario",
       "id": 7
+    },
+    {
+      "title": "New Blog",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe accusantium veritatis velit voluptatem quidem minima delectus nesciunt porro adipisci numquam beatae molestias maxime error blanditiis minus ad ducimus unde nam labore ullam ipsam, id neque architecto. Ut blanditiis, dolore quibusdam consequuntur rem iure itaque reiciendis ducimus natus repudiandae iusto officiis, id iste dicta ratione voluptatem fugiat ex aperiam dolores vero tenetur nesciunt. Recusandae veritatis voluptatem nam corrupti explicabo, dolorum aperiam temporibus quidem delectus est dolorem consequatur optio ratione sapiente fugiat officia a vitae magni omnis. Architecto ad dolores ut aperiam iste, nobis nemo cupiditate debitis, fugit, suscipit possimus eaque expedita!",
+      "author": "yoshi",
+      "id": 8
     }
   ]
 }
